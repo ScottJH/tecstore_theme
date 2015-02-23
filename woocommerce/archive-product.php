@@ -16,25 +16,29 @@ get_header( 'shop' ); ?>
 				
 	<?php get_sidebar(); // sidebar 1 ?>
 			
-	<div id="main" class="col-sm-8 clearfix" role="main">
-		
-		<a class="cart-contents" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php echo sprintf (_n( '%d item', '%d items', WC()->cart->cart_contents_count ), WC()->cart->cart_contents_count ); ?> - <?php echo WC()->cart->get_cart_total(); ?></a>
+	<div id="main" class="col-sm-9 clearfix" role="main">
 
+		<header>
 
-	<?php
-		/**
-		 * woocommerce_before_main_content hook
-		 *
-		 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
-		 * @hooked woocommerce_breadcrumb - 20
-		 */
-		do_action( 'woocommerce_before_main_content' );
-	?>
-
+			<h1 class="page-title">Shop TEC for Trailer Parts</h1>
+			
+			<nav class="clearfix">
+			
+			<ul class="nav nav-pills navbar-right">
+				<li>
+					<a class="cart-contents" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"> My Cart <?php echo sprintf (_n( '(%d item)', '(%d items)', WC()->cart->cart_contents_count ), WC()->cart->cart_contents_count ); ?></a>
+				</li>
+				<li><a href="/checkout">Checkout</a></li>
+				<li><a href="/wp-login.php">Log In</a></li>
+			</ul>
+	
+			</nav>
+		</header>
+		<hr>
 		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-
-			<h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
-
+		
+			<h2 class="page-title"><?php woocommerce_page_title(); ?></h2>
+			
 		<?php endif; ?>
 
 		<?php do_action( 'woocommerce_archive_description' ); ?>
@@ -56,7 +60,6 @@ get_header( 'shop' ); ?>
 				<?php woocommerce_product_subcategories(); ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
-
 
 					<?php wc_get_template_part( 'content', 'product' ); ?>
 

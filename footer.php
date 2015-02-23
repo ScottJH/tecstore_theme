@@ -1,23 +1,15 @@
 			<footer role="contentinfo">
 			
 				<div id="inner-footer" class="clearfix">
-		          <hr />
-		          <div id="widget-footer" class="clearfix row">
-		            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer1') ) : ?>
-		            <?php endif; ?>
-		            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer2') ) : ?>
-		            <?php endif; ?>
-		            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer3') ) : ?>
-		            <?php endif; ?>
-		          </div>
-					
+		 			
+		 			<p>
+		 				Disclaimer: Please note that all information, photos and prices are subject to change or correction without notice. All liability expressly disclaimed. <br>
+						Copyright &copy; 2012-2015 TEC Equipment, Inc. All Rights Reserved.
+		 			</p>
+
 					<nav class="clearfix">
 						<?php wp_bootstrap_footer_links(); // Adjust using Menus in Wordpress Admin ?>
 					</nav>
-					
-					<p class="pull-right"><a href="http://320press.com" id="credit320" title="By the dudes of 320press">320press</a></p>
-			
-					<p class="attribution">&copy; <?php bloginfo('name'); ?></p>
 				
 				</div> <!-- end #inner-footer -->
 				

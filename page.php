@@ -5,7 +5,23 @@
 				
 				<?php get_sidebar(); // sidebar 1 ?>
 			
-				<div id="main" class="col-sm-8 clearfix" role="main">
+				<div id="main" class="col-sm-9 clearfix" role="main">
+
+					<header>
+
+						<h1 class="page-title">Shop TEC for Trailer Parts</h1>
+						
+						<nav>
+						
+						<ul class="nav nav-pills navbar-right">
+							<li>
+								<a class="cart-contents" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"> My Cart <?php echo sprintf (_n( '(%d item)', '(%d items)', WC()->cart->cart_contents_count ), WC()->cart->cart_contents_count ); ?></a>
+							</li>
+							<li><a href="/checkout">Checkout</a></li>
+							<li><a href="/wp-login.php">Log In</a></li>
+						</ul>
+				
+					</nav>
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
@@ -13,7 +29,7 @@
 						
 						<header>
 							
-							<div class="page-header"><h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1></div>
+							<div class="page-header"><h2 class="page-title" itemprop="headline"><?php the_title(); ?></h2></div>
 						
 						</header> <!-- end article header -->
 					

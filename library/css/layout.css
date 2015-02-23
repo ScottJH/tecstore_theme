@@ -10,6 +10,14 @@ Colors
 body {
   background: #4b88be url('../../images/bg.jpg') top center no-repeat;
 }
+h1,
+h2,
+h3 {
+  font-family: 'Titillium Web', sans-serif;
+}
+.container {
+  max-width: 970px;
+}
 /* Admin Top Navigation fix */
 body.admin-bar .navbar-fixed-top {
   top: 28px;
@@ -40,6 +48,12 @@ select,
 }
 .more-link {
   white-space: nowrap;
+}
+footer[role="contentinfo"] {
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  font-size: .75em;
 }
 .footer-links {
   float: right;

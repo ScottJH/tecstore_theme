@@ -1,19 +1,8 @@
-				<div id="sidebar1" class="col-sm-4" role="complementary">
-				
-					<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
-
-						<?php dynamic_sidebar( 'sidebar1' ); ?>
-
-					<?php else : ?>
-
-						<!-- This content shows up if there are no widgets defined in the backend. -->
-						
-						<div class="alert alert-message">
-						
-							<p><?php _e("Please activate some Widgets","wpbootstrap"); ?>.</p>
-						
-						</div>
-
-					<?php endif; ?>
+				<div id="sidebar1" class="col-sm-3" role="complementary">
+					
+					<a href="http://tecequipment.com" alt="Back to TEC Equipment" class="btn btn-default">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						Back to TECEquipment.com
+					</a>
 
 				</div>

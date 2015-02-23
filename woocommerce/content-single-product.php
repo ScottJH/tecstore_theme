@@ -13,6 +13,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
+<div class="row clearfix">
+<?php get_sidebar(); // sidebar 1 ?>
+
+<div id="main" class="col-sm-9 clearfix" role="main">
+
+
 <?php
 	/**
 	 * woocommerce_before_single_product hook
@@ -25,11 +31,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	 	return;
 	 }
 ?>
-
-
-<?php get_sidebar(); // sidebar 1 ?>
-
-<div id="main" class="col-sm-8 clearfix" role="main">
 
 <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 
@@ -77,6 +78,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 </div><!-- #product-<?php the_ID(); ?> -->
 
+</div>
 </div>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>

@@ -43,7 +43,7 @@ $woocommerce_loop['loop']++;
 			<?php
 				echo $category->name;
 				if ( $category->count > 0 )
-					echo apply_filters( 'woocommerce_subcategory_count_html', ' <mark class="count">(' . $category->count . ')</mark>', $category );
+					echo apply_filters( 'woocommerce_subcategory_count_html', '', $category );
 			?>
 		</h3>
 
