@@ -37,7 +37,7 @@
 				
 		<header role="banner">
 				
-			<div class="navbar navbar-default navbar-fixed-top">
+			<div class="navbar">
 				<div class="container">
           
 					<div class="navbar-header">
@@ -47,19 +47,19 @@
 							<span class="icon-bar"></span>
 						</button>
 
-						<a class="navbar-brand" title="<?php echo get_bloginfo('description'); ?>" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
+						<a class="navbar-brand" title="<?php echo get_bloginfo('description'); ?>" href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt=""></a>
 					</div>
 
 					<div class="collapse navbar-collapse navbar-responsive-collapse">
 						<?php wp_bootstrap_main_nav(); // Adjust using Menus in Wordpress Admin ?>
 
-						<?php //if(of_get_option('search_bar', '1')) {?>
-						<form class="navbar-form navbar-right" role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
-							<div class="form-group">
-								<input name="s" id="s" type="text" class="search-query form-control" autocomplete="off" placeholder="<?php _e('Search','wpbootstrap'); ?>">
-							</div>
+						<form class="pull-right" role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/'  ) ); ?>">
+							<div>
+								<input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" placeholder="<?php _e( 'Search for products', 'woocommerce' ); ?>" />
+								<input type="submit" id="searchsubmit" value="<?php echo esc_attr__( 'Search' ); ?>" />
+								<input type="hidden" name="post_type" value="product" />
+								</div>
 						</form>
-						<?php //} ?>
 					</div>
 
 				</div> <!-- end .container -->

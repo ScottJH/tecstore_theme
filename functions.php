@@ -548,7 +548,7 @@ add_filter('nav_menu_css_class', 'wp_bootstrap_add_active_class', 10, 2 );
 if( !function_exists("wp_bootstrap_theme_styles") ) {  
     function wp_bootstrap_theme_styles() { 
         // This is the compiled css file from LESS - this means you compile the LESS file locally and put it in the appropriate directory if you want to make any changes to the master bootstrap.css.
-        wp_register_style( 'wpbs', get_template_directory_uri() . '/library/dist/css/styles.f6413c85.min.css', array(), '1.0', 'all' );
+        wp_register_style( 'wpbs', get_template_directory_uri() . '/library/css/styles.css', array(), '1.0', 'all' );
         wp_enqueue_style( 'wpbs' );
 
         // For child themes
@@ -706,5 +706,9 @@ function wp_bootstrap_filter_ptags_on_images( $content ){
   return preg_replace( '/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content );
 }
 add_filter( 'the_content', 'wp_bootstrap_filter_ptags_on_images' );
+
+// Add woocommerce support
+
+add_theme_support( 'woocommerce' );
 
 ?>
