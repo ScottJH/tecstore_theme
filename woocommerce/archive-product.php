@@ -34,7 +34,6 @@ get_header( 'shop' ); ?>
 	
 			</nav>
 		</header>
-		<hr>
 		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 		
 			<h2 class="page-title"><?php woocommerce_page_title(); ?></h2>
