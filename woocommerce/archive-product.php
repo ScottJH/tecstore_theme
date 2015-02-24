@@ -18,6 +18,16 @@ get_header( 'shop' ); ?>
 			
 	<div id="main" class="col-sm-9 clearfix" role="main">
 
+		<?php
+		/**
+		 * woocommerce_before_main_content hook
+		 *
+		 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
+		 * @hooked woocommerce_breadcrumb - 20
+		 */
+		do_action( 'woocommerce_before_main_content' );
+		?>
+
 		<header>
 
 			<h1 class="page-title">Shop TEC for Trailer Parts</h1>

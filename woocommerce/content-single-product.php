@@ -18,6 +18,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div id="main" class="col-sm-9 clearfix" role="main">
 
+	<header>
+
+			<h1 class="page-title">Shop TEC for Trailer Parts</h1>
+			
+			<nav class="clearfix">
+			
+			<ul class="nav nav-pills navbar-right">
+				<li>
+					<a class="cart-contents" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"> My Cart <?php echo sprintf (_n( '(%d item)', '(%d items)', WC()->cart->cart_contents_count ), WC()->cart->cart_contents_count ); ?></a>
+				</li>
+				<li><a href="/checkout">Checkout</a></li>
+				<li><a href="/wp-login.php">Log In</a></li>
+			</ul>
+	
+			</nav>
+		</header>
+
 
 <?php
 	/**
@@ -74,11 +91,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 		do_action( 'woocommerce_after_single_product_summary' );
 	?>
 
-	<meta itemprop="url" content="<?php the_permalink(); ?>" />
+	<meta itemprop="url" content="<?php the_permalink(); ?>" />	
 
-</div><!-- #product-<?php the_ID(); ?> -->
+	</div><!-- #product-<?php the_ID(); ?> -->
 
-</div>
+	</div>
 </div>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>

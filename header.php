@@ -48,7 +48,7 @@
 					
 					</div>
 
-					<div class="collapse navbar-collapse navbar-responsive-collapse">
+					<div>
 						<?php wp_bootstrap_main_nav(); // Adjust using Menus in Wordpress Admin ?>
 
 						<form class="pull-right" role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/'  ) ); ?>">
